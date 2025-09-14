@@ -1,15 +1,8 @@
-
 import { GoogleGenAI, Modality } from "@google/genai";
 
-const API_KEY = process.env.API_KEY;
-
-if (!API_KEY) {
-  // This will be caught by the App component and shown to the user.
-  // In a real-world app, you might want more sophisticated handling.
-  throw new Error("API_KEY environment variable not set. Please set your Gemini API key.");
-}
-
-const ai = new GoogleGenAI({ apiKey: API_KEY });
+// Fix: Per coding guidelines, initialize GoogleGenAI with process.env.API_KEY directly.
+// This also resolves the TypeScript error related to 'import.meta.env'.
+const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 const GENERATION_PROMPT = `Generate an image using my photo:
 Use a blue background with an overall bright and fair tone. 

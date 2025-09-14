@@ -1,0 +1,5 @@
+{
+  "name": "Pet Expression Collage Generator",
+  "description": "Upload a photo of your pet and generate a 3x3 collage of nine different adorable expressions. This app uses AI to create a realistic and photogenic collage based on your pet's photo.",
+  "requestFramePermissions": []
+}
